@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="9dip"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:background="@drawable/list_layout_item_selector"
+    android:paddingTop="10dip" >
+
+    <net.oschina.gitapp.widget.CircleImageView
+        android:id="@+id/projectissues_listitem_userface"
+        style="@style/UserFaceImageStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/projectissues_listitem_title"
+            style="@style/project_list_title" />
+
+        <TextView
+            android:id="@+id/projectissues_listitem_description"
+            style="@style/project_list_description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/projectissues_listitem_author"
+                style="@style/project_list_someinfo" />
+
+            <TextView
+                android:id="@+id/projectissues_listitem_date"
+                style="@style/project_list_someinfo"
+                android:layout_marginLeft="10dip" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/widget_comment_count_icon"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/projectissues_listitem_count"
+                style="@style/project_list_someinfo"
+                android:layout_marginLeft="3dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

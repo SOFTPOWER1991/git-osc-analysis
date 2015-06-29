@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/project_grid"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+        android:id="@+id/project_readme"
+        style="@style/project_detail_layout_style" >
+
+        <ImageView
+            style="@style/project_detail_mid_grid_item_img"
+            android:contentDescription="@string/img_description"
+            android:background="@drawable/project_detail_icon_readme" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Readme" />
+
+        <ImageView
+            style="@style/project_detail_sorrow_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line" />
+    
+    <LinearLayout 
+        android:id="@+id/project_code"
+        style="@style/project_detail_layout_style" >
+
+        <ImageView
+            style="@style/project_detail_mid_grid_item_img"
+            android:contentDescription="@string/img_description"
+            android:background="@drawable/project_detail_icon_code" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="代码" />
+
+        <ImageView
+            style="@style/project_detail_sorrow_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line" />
+
+    <LinearLayout 
+        android:id="@+id/project_commits"
+        style="@style/project_detail_layout_style"
+        android:visibility="visible" >
+
+        <ImageView
+            style="@style/project_detail_mid_grid_item_img"
+            android:contentDescription="@string/img_description"
+            android:background="@drawable/project_detail_icon_commit" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="提交" />
+
+        <ImageView
+            style="@style/project_detail_sorrow_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line"
+        android:visibility="visible" />
+
+    <LinearLayout 
+        android:id="@+id/project_issues"
+        style="@style/project_detail_layout_style" >
+
+        <ImageView
+            style="@style/project_detail_mid_grid_item_img"
+            android:contentDescription="@string/img_description"
+            android:background="@drawable/project_detail_icon_issue" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="问题" />
+
+        <ImageView
+            style="@style/project_detail_sorrow_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <View
+        style="@style/h_line" />
+
+</LinearLayout>

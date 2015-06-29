@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/issue_comment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="8dip"
+        android:hint="说点什么" />
+
+    <Button
+        android:id="@+id/issue_comment_pub"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_margin="8dip"
+        android:background="@drawable/btn_style_green"
+        android:textColor="@color/white"
+        android:enabled="false"
+        android:text="评论" />
+</LinearLayout>

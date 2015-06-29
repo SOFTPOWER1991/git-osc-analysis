@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_item_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/projectcode_tree_prefolder"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dip"
+        android:padding="8dip"
+        android:gravity="center"
+        android:background="@drawable/list_item_background" >
+
+        <TextView
+            android:id="@+id/projectcode_pre_img"
+            android:text="@string/icon_folders"
+            android:textColor="#BEBEBE"
+            android:gravity="center"
+            android:layout_marginTop="5dip"
+            style="@style/project_codetree_list_img" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingBottom="2dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=".."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="10sp" />
+     
+            <TextView
+                android:id="@+id/projectcode_floders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="父目录"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dip"
+        android:background="@color/gray" />
+
+</LinearLayout>

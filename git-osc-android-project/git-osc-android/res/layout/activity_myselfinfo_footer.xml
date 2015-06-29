@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_marginTop="20dip"
+        style="@style/User_info_layout"
+        android:background="@drawable/table_above_nor" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="加入时间：" />
+
+        <TextView
+            android:id="@+id/user_info_jointime"
+            style="@style/User_info_detail_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/User_info_layout"
+        android:background="@drawable/table_mid_nor" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="微博：" />
+
+        <TextView
+            android:id="@+id/user_info_weibo"
+            style="@style/User_info_detail_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/User_info_layout"
+        android:background="@drawable/table_mid_nor" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="博客：" />
+
+        <TextView
+            android:id="@+id/user_info_blog"
+            style="@style/User_info_detail_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/User_info_layout"
+        android:background="@drawable/table_below_nor" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="个人介绍：" />
+
+        <TextView
+            android:id="@+id/user_info_intro"
+            style="@style/User_info_detail_text" />
+    </LinearLayout>
+
+</LinearLayout>

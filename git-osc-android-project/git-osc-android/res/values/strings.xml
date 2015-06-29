@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Git@OSC</string>
+    
+    <string name="main_menu_login_tips">点击登录</string>
+    <string name="main_menu_title_explore">发现</string>
+    <string name="main_menu_title_myself">我的</string>
+    <string name="main_menu_title_notice">通知</string>
+    <string name="main_menu_title_language">语言</string>
+    <string name="main_menu_title_shake">摇一摇</string>
+    <string name="main_menu_title_setting">设置</string>
+    <string name="main_menu_title_exit">退出</string>
+    
+    <string name="msg_load_userface_fail">加载头像失败</string>
+    <string name="msg_load_image_fail">加载图像失败</string>
+    
+    <string name="login_title">登录</string>
+    <string name="login_account">帐号</string>
+    <string name="login_account_hint">邮箱</string>
+    <string name="login_password">密码</string>
+    <string name="login_password_hint">密码</string>
+    <string name="login_tips">正在登录...</string>
+    <string name="main_menu_logout">注销登录</string>
+    <string name="main_menu_login">用户登录</string>
+    <string name="list_empty_hint">暂无数据</string>
+    <string name="load_ing">加载中...</string>
+    
+    <string name="avatar">Avatar</string>
+</resources>

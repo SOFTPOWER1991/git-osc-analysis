@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItem"
+    android:orientation="vertical"
+    android:paddingBottom="0dp" >
+
+    <TextView
+        android:id="@+id/commit_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/text"
+        android:textColorLink="@color/text_link"
+        android:textSize="13sp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:id="@+id/commit_ll_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:id="@+id/commit_author_face"
+            style="@style/AvatarMedium"
+            android:background="@drawable/widget_dface_loading"
+            android:contentDescription="@string/avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <TextView
+                android:id="@+id/commit_author_name"
+                style="@style/ListTitleText"
+                android:paddingBottom="0dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/commit_date"
+                style="@style/ListSubtitleText"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/commit_ll_committer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/commit_committer_face"
+            style="@style/AvatarMedium"
+            android:background="@drawable/abc_ab_bottom_solid_dark_holo"
+            android:contentDescription="@string/avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <TextView
+                android:id="@+id/commit_committer_name"
+                style="@style/ListTitleText"
+                android:paddingBottom="0dp"
+                android:singleLine="true"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/commit_date1"
+                style="@style/ListSubtitleText"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

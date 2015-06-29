@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ProgressBar
+        android:id="@+id/issue_edit_loading"
+        style="@style/ListSpinner"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    
+
+    <ScrollView
+        android:id="@+id/issue_edit_sv_issue_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:text="标题" />
+
+            <EditText
+                android:id="@+id/issue_edit_title"
+                style="@style/FormalSingleLineEditText"
+                android:layout_width="match_parent" />
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:paddingTop="5dp"
+                android:text="被指派人"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/issue_edit_ll_assignee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inset_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/issue_edit_assignee_name"
+                    style="@style/ListSubtitleText"
+                    android:singleLine="true"
+                    android:textColor="@color/text" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:paddingTop="5dp"
+                android:text="里程碑"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/issue_edit_ll_milestone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inset_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/issue_edit_milestone"
+                    style="@style/ListSubtitleText"
+                    android:singleLine="true"
+                    android:textColor="@color/text" />
+
+                <include
+                    layout="@layout/milestone"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:paddingTop="5dp"
+                android:text="描述" />
+
+            <EditText
+                android:id="@+id/issue_edit_body"
+                style="@style/FormalMultiLineEditText"
+                android:layout_width="match_parent"
+                android:minLines="3"
+                android:scrollbars="horizontal|vertical" />
+        </LinearLayout>
+    </ScrollView>
+    
+    <Button
+        android:id="@+id/issue_edit_pub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/issue_edit_sv_issue_content"
+        android:background="@drawable/btn_style_green"
+        android:enabled="false"
+        android:layout_margin="5dip"
+        android:textColor="@color/white"
+        android:text="创建issue" />
+
+</RelativeLayout>

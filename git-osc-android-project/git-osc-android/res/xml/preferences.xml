@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="功能设置" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="isnotice"
+            android:layout="@layout/preference"
+            android:summary="已开启接收通知"
+            android:title="接收通知" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="voice"
+            android:layout="@layout/preference"
+            android:summary="已开启提示声音"
+            android:title="提示声音" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="checkup"
+            android:layout="@layout/preference"
+            android:summary="启动程序时检查版本更新"
+            android:title="启动检查更新" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="缓存设置" >
+        <Preference
+            android:key="cache"
+            android:layout="@layout/preference"
+            android:summary="0KB"
+            android:title="清除缓存" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="其他" >
+        <Preference
+            android:key="feedback"
+            android:layout="@layout/preference"
+            android:summary="用户意见反馈"
+            android:title="意见反馈" />
+        <Preference
+            android:key="update"
+            android:layout="@layout/preference"
+            android:summary="检测是否有新版本"
+            android:title="新版本检测" />
+        <Preference
+            android:key="about"
+            android:layout="@layout/preference"
+            android:summary="关于我们、版权信息"
+            android:title="关于我们" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

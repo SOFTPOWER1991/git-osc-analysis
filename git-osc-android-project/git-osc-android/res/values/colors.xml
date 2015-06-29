@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 存储App需要用到的颜色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+    <color name="lemonyellow">#FFFACD</color>
+    <color name="graywhite">#F5F5F5</color>
+    <color name="grayslate">#708090</color>
+    <color name="lightblue">#0083FF</color>
+    <color name="actionBar_color">#ff474d57</color>
+    <color name="pressed_gitlab">#CC30A1BA</color>
+    <color name="slidingmenu_bg">#212121</color>
+    
+    <color name="project_detail_item">#e2e0e0</color>
+    
+    <!-- nontice list color -->
+    <color name="notice_layout_back">#3c3c3c</color>
+    
+    <!-- project list color -->
+    <color name="project_listitem_title">#294fa1</color>
+    <color name="project_listitem_description">#515151</color>
+    <color name="project_listitem_someinfo">#b6b6b6</color>
+	
+    <!-- 列表所需颜色值 -->
+    <color name="listitem_transparent">#00000000</color>
+    <color name="listitem_black">#515151</color>
+    <color name="listitem_white">#ffffffff</color>
+    <color name="listitem_blue">#294fa1</color>
+    <color name="listitem_gray">#515151</color>
+    <color name="listitem_green">#ffe3ffc6</color>
+    
+    <!-- 菜单layout item颜色 -->
+    <color name="menu_layout_default">#363636</color>
+	<color name="menu_layout_item_pressed_color">#252525</color>
+    
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff00ddff</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+    
+    <color name="actionbar_background_end">#282828</color>
+    <color name="actionbar_background_start">#515252</color>
+    <color name="actionbar_text">#F4F2F1</color>
+    
+    <color name="background">#F9F9F9</color>
+    <color name="background_selected">#E8E8E8</color>
+    <color name="text">#1E1E1E</color>
+    <color name="text_light">#AEAEAE</color>
+    <color name="text_icon">#A8A8A8</color>
+    <color name="text_recent">#3797C7</color>
+    <color name="text_description">#666666</color>
+    <color name="text_link">#4183C4</color>
+    <color name="section_border">#D0D0D0</color>
+    <color name="section_start">#F9F9F9</color>
+    <color name="section_end">#E0E0E0</color>
+    <color name="section_subtitle">#555555</color>
+    <color name="edit_text_background">#F8F8F8</color>
+    <color name="edit_text_inner">#EDEDED</color>
+    <color name="edit_text_outer">#959595</color>
+    <color name="edit_text_cursor">#A6A6A6</color>
+    <color name="milestone_border">#ABABAB</color>
+    <color name="milestone_opened_start">#BEBEBE</color>
+    <color name="milestone_opened_end">#DCDCDC</color>
+    <color name="milestone_closed_start">#6AA811</color>
+    <color name="milestone_closed_end">#6EB807</color>
+    <color name="inset_background">#F8F8F8</color>
+    <color name="inset_outer">#C7C7C7</color>
+    <color name="inset_inner">#FFFFFF</color>
+
+</resources>

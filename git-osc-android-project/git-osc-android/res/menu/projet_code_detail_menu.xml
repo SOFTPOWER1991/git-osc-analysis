@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+    
+    <item 
+        android:id="@+id/project_detail_menu_refresh"
+        android:orderInCategory="100"
+        android:icon="@drawable/abc_ic_menu_refresh"
+        android:title="刷新"
+        app:showAsAction="always" />
+    
+    <item
+        android:id="@+id/project_detail_menu_more"
+       	android:orderInCategory="100"
+       	android:icon="@drawable/abc_ic_menu_moreoverflow_normal_holo_dark"
+       	android:title="更多操作" 
+       	app:showAsAction="always"/>
+</menu>

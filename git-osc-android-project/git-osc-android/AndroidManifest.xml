@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.oschina.gitapp"
+    android:versionCode="8"
+    android:versionName="V 1.1.3" >
+
+    <!--
+         1.Target SDK version must be 16, not 17, or JavaScript bridge for
+         WebView widgets does not work on a 4.2 Nexus 7
+         2.也可以在js调用的方法加上注解@JavascriptInterface，不然是不用被js代码所调用的
+    -->
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="net.oschina.gitapp.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:theme="@style/GitAppTheme" >
+        <activity
+            android:name=".AppStart"
+            android:label="@string/app_name" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+        <activity
+            android:name=".SplashPage"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".WelcomePage"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".ui.MySelfEventsActivity"
+            android:label="我的动态" >
+        </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/login_title"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified" >
+        </activity>
+        <activity android:name=".ui.ProjectActivity" />
+        <activity android:name=".ui.ProjectReadMeActivity" />
+        <activity android:name=".ui.ProjectCodeActivity" />
+        <activity android:name=".ui.ProjectSomeInfoListActivity" />
+        <activity android:name=".ui.NotificationActivity" >
+        </activity>
+        <activity
+            android:name=".ui.SearchActivity"
+            android:label="项目搜索"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.LanguageActivity"
+            android:label="编程语言" />
+        <activity
+            android:name=".ui.ShakeActivity"
+            android:label="摇一摇"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CodeFileDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.CommitDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.CommitFileDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.IssueDetailActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.IssueCommentActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.IssueEditActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".ui.MySelfInfoActivity"
+            android:label="个人信息"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.UserInfoActivity"
+            android:label="用户信息"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.SettingActivity"
+            android:label="设置"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".ui.CodeFileEditActivity"
+            android:label="编辑"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".ui.ImageZoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".ui.About"
+            android:label="关于git"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".ui.ShippingAddressActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="收货信息"
+            android:launchMode="singleTask" >
+        </activity>
+
+        <!-- 注册app广播接收器 -->
+        <receiver android:name=".ui.BroadCast" >
+            <intent-filter>
+                <action android:name="net.oschina.gitapp.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- umeng -->
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1101982202" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="53ce746f56240bfb4105762d" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia" >
+        </meta-data>
+    </application>
+
+</manifest>

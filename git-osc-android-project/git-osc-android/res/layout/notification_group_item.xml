@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+    android:gravity="center|left"
+    android:orientation="horizontal" >
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="10dip">
+        <net.oschina.gitapp.widget.CircleImageView 
+            android:id="@+id/group_face"
+            style="@style/UserFaceImageStyle"
+            android:layout_gravity="center"
+            android:layout_width="35dip"
+            android:layout_height="35dip"/>
+        
+        <TextView 
+            android:id="@+id/group_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/space_10"
+            android:layout_gravity="center"
+            android:maxEms="3"
+            android:gravity="center"
+            android:text="火蚁火蚁火"/>
+        
+    </LinearLayout>
+    
+    <TextView  
+        android:id="@+id/group_name"  
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"  
+        android:text="android-app"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dip"
+        android:textColor="#284b96"
+        android:textSize="@dimen/space_18"
+        android:singleLine="true" />
+        
+    <TextView  
+        android:id="@+id/group_count"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+        android:text="10"
+        android:textColor="@color/gray"
+        android:layout_marginRight="10dip"
+        android:singleLine="true"/>
+    
+    <ImageView 
+        android:id="@+id/group_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notice_group_arrow_up"/>
+
+</LinearLayout>

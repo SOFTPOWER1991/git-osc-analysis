@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 个人动态Commits列表项布局 -->  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="horizontal" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" 
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingTop="8dip"
+    android:paddingBottom="7dip">   
+	
+    <TextView 
+       		android:id="@+id/event_commits_listitem_commitid"  
+    		android:layout_width="wrap_content" 
+           	android:layout_height="wrap_content" 
+       	    android:includeFontPadding="false"
+           	android:textSize="@dimen/text_size_12"
+           	android:maxLength="9"
+            android:textColor="#0e5986"/>
+   	
+    <TextView 
+       		android:id="@+id/event_commits_listitem_username"  
+    		android:layout_width="wrap_content" 
+           	android:layout_height="wrap_content" 
+       	    android:includeFontPadding="false"
+           	android:textSize="@dimen/text_size_12"
+           	android:layout_marginLeft="@dimen/space_3"
+           	android:layout_marginRight="@dimen/space_3"
+            android:textColor="@color/listitem_gray"/>
+    <TextView 
+    		android:layout_width="wrap_content" 
+           	android:layout_height="wrap_content" 
+       	    android:includeFontPadding="false"
+           	android:textSize="@dimen/text_size_12"
+           	android:text=" — "
+            android:textColor="@color/listitem_gray"/>
+    <TextView 
+       		android:id="@+id/event_commits_listitem_message"  
+    		android:layout_width="wrap_content" 
+           	android:layout_height="wrap_content" 
+       	    android:includeFontPadding="false"
+           	android:textSize="@dimen/text_size_12"
+           	android:maxLines="5"
+           	android:ellipsize="end"
+            android:textColor="@color/listitem_gray"/>
+
+</LinearLayout> 

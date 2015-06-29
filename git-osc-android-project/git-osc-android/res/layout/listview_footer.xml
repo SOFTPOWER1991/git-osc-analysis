@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/list_layout_item_selector"
+    android:padding="10dp" >
+
+    <ProgressBar
+        android:id="@+id/listview_foot_progress"
+        android:layout_width="20dip"
+        android:layout_height="20dip"
+        style="@style/ListSpinner" />
+
+    <TextView
+        android:id="@+id/listview_foot_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/listitem_blue"
+        android:text="@string/load_ing" />
+
+</LinearLayout>

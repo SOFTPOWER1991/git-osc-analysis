@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <!-- 未读通知列表 -->
+
+    <ExpandableListView
+        android:id="@+id/notification_fragment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/notification_fragment_empty"
+        layout="@layout/notification_fragment_empty"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/notification_fragment_loading"
+        style="@style/ListSpinner"
+        android:layout_gravity="center" />
+
+</FrameLayout>

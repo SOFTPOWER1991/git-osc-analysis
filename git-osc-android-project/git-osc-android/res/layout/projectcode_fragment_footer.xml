@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:gravity="center_vertical"
+    android:background="@drawable/footer_selector" >
+
+    <TextView
+        android:id="@+id/projectcode_branch_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dip"
+        android:textColor="#F4F2F1"
+        android:textSize="28sp"
+        android:text="@string/icon_fork" />
+
+    <TextView
+        android:id="@+id/projectcode_branch_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:text="master"
+        android:layout_gravity="center"
+        android:textColor="@color/actionbar_text"
+        android:textSize="15sp" />
+
+</LinearLayout>

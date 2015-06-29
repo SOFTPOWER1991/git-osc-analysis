@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true" >
+	
+    <EditText
+        android:id="@+id/codefile_edit_msg"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_weight="1"
+        android:hint="提交说明" />
+
+    <Button
+        android:id="@+id/codefile_edit_pub"
+        android:layout_width="80dip"
+        android:layout_height="35dip"
+        android:layout_marginRight="8dip"
+        android:background="@drawable/btn_style_green"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:text="提交" />
+
+</LinearLayout>

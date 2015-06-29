@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 个人动态列表项布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="7dip"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:background="@drawable/list_layout_item_selector"
+    android:paddingTop="8dip" >
+
+    <net.oschina.gitapp.widget.CircleImageView
+        android:id="@+id/event_listitem_userface"
+        style="@style/UserFaceImageStyle" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/event_listitem_username"
+            style="@style/events_list_title" />
+
+        <TextView
+            android:id="@+id/event_listitem_content"
+            style="@style/events_list_content" />
+
+        <LinearLayout
+            android:id="@+id/event_listitem_commits_list"
+            android:orientation="vertical"
+            style="@style/events_list_commits" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:orientation="horizontal" >
+
+            <!-- 来自哪里（android/iphone/windows phone） -->
+            <TextView
+                android:id="@+id/event_listitem_client"
+				style="@style/events_list_client" />
+
+            <TextView
+                android:id="@+id/event_listitem_date"
+                style="@style/events_list_data" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

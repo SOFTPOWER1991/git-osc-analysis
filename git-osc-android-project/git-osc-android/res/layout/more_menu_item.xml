@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_more_menu_layout"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <ImageView
+        android:id="@+id/more_menu_item_img"
+        style="@style/app_more_menu_img"
+        android:background="@drawable/more_menu_icon_share"
+        android:contentDescription="@string/img_description" />
+
+    <TextView
+        android:id="@+id/more_menu_item_text"
+        style="@style/app_more_menu_text"
+        android:text="分享项目" />
+
+</LinearLayout>

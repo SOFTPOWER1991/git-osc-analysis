@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <ProgressBar
+        android:id="@+id/shipping_address_loading"
+        style="@style/ListSpinner"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+    
+
+    <ScrollView
+        android:id="@+id/shipping_address_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:text="真实姓名 *" />
+
+            <EditText
+                android:id="@+id/name"
+                style="@style/FormalSingleLineEditText"
+                android:layout_width="match_parent" />
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:paddingTop="5dp"
+                android:text="手机号码 *"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/tell"
+                style="@style/FormalSingleLineEditText"
+                android:layout_width="match_parent" />
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:paddingTop="5dp"
+                android:text="收货地址 *"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/address"
+                style="@style/FormalSingleLineEditText"
+                android:layout_width="match_parent" />
+
+            <TextView
+                style="@style/HeaderTitleText"
+                android:paddingTop="5dp"
+                android:text="备注" />
+
+            <EditText
+                android:id="@+id/comment"
+                style="@style/FormalMultiLineEditText"
+                android:layout_width="match_parent"
+                android:hint="T恤（S、M、L、XL）或 内裤（L、XL、2XL、3XL）\n请备注码数\n\n如未填写，我们将随机寄出"
+                android:minLines="4"
+                android:scrollbars="horizontal|vertical" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               	android:layout_marginTop="15dip"
+               	android:layout_marginBottom="15dip"
+                android:text="tips:\n     如有疑问，欢迎 @火蚁 或 @阿娇OSC" />
+        </LinearLayout>
+    </ScrollView>
+    
+    <Button
+        android:id="@+id/shipping_address_pub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_alignParentBottom="true"
+        android:layout_above="@id/shipping_address_content"
+        android:background="@drawable/btn_style_green"
+        android:enabled="false"
+        android:layout_margin="5dip"
+        android:layout_marginTop="25dip"
+        android:textColor="@color/white"
+        android:text="保存" />
+
+</RelativeLayout>

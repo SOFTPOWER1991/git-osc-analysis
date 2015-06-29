@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/list_layout_item_selector"
+    android:orientation="horizontal"
+    android:paddingBottom="7dip"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingTop="8dip" >
+
+    <!-- 项目作者头像 -->
+
+    <net.oschina.gitapp.widget.CircleImageView
+        android:id="@+id/myself_project_listitem_userface"
+        style="@style/UserFaceImageStyle" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/myself_project_listitem_name"
+                style="@style/project_list_title"
+                android:layout_weight="1" />
+            
+            <!-- flag -->
+            <ImageView
+                android:id="@+id/myself_project_listitem_flag"
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/project_flag_fork"
+                android:contentDescription="@string/img_description"
+                android:visibility="visible" />
+            
+        </LinearLayout>
+
+        <!-- project description -->
+
+        <TextView
+            android:id="@+id/myself_project_listitem_description"
+            style="@style/project_list_description" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/myself_project_listitem_date"
+                style="@style/project_list_someinfo" />
+
+            <!-- language type -->
+
+            <ImageView
+                android:id="@+id/myself_project_listitem_language_image"
+                style="@style/project_list_img"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/language" />
+
+            <TextView
+                android:id="@+id/myself_project_listitem_language"
+                style="@style/project_list_someinfo" />
+
+            <!-- star nums -->
+
+            <ImageView
+                style="@style/project_list_img"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/unstar" />
+
+            <TextView
+                android:id="@+id/myself_project_listitem_star"
+                style="@style/project_list_someinfo" />
+
+            <!-- fork nums -->
+
+            <ImageView
+                style="@style/project_list_img"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/fork" />
+
+            <TextView
+                android:id="@+id/myself_project_listitem_fork"
+                style="@style/project_list_someinfo" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

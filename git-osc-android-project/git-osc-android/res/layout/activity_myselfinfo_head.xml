@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/user_info_userface"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:clickable="true"
+        android:padding="3.0dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/widget_dface" />
+
+    <TextView
+        android:id="@+id/user_info_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="8dip"
+        android:layout_toRightOf="@id/user_info_userface"
+        android:text="火蚁"
+        android:textSize="@dimen/text_size_15" />
+
+    <Button
+        android:id="@+id/user_info_editer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="编辑头像"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone" />
+
+</RelativeLayout>

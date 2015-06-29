@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#111"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/shake_luck_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dip"
+        android:gravity="center|left"
+        android:textColor="@color/white"
+        android:autoLink="web"
+        android:textSize="10sp"
+        android:padding="2dip"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/shakeBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/img_description"
+        android:src="@drawable/shakehideimg_man" />
+
+    <LinearLayout
+        android:id="@+id/shake_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/shakeImgUp"
+            android:layout_width="fill_parent"
+            android:layout_height="140dip"
+            android:background="#111"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/shake_logo_up" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shakeImgDown"
+            android:layout_width="fill_parent"
+            android:layout_height="140dip"
+            android:background="#111"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/shake_logo_down" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shake_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/shake_content"
+        android:layout_marginBottom="25dip"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:layout_margin="5dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在为你准备项目，客官请稍候..."
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/shakeres_paroject"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dip"
+        android:visibility="gone" >
+
+        <include
+            layout="@layout/exploreproject_listitem"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shakeres_award"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dip"
+        android:background="@drawable/corners_bg"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/shake_award_img"
+            android:layout_width="88dip"
+            android:layout_height="88dip"
+            android:layout_margin="10dip"
+            android:contentDescription="@string/img_description"
+            android:src="@drawable/icon_logo" />
+
+        <TextView
+            android:id="@+id/shake_award_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/shake_award_img"
+            android:text="开源马克杯一个"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

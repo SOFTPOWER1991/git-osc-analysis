@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+	
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/icon_login_logo"
+        android:layout_marginBottom="300dip"/>
+    
+    <TextView
+        android:id="@+id/about_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="260dip"
+        android:text="Beata 0.8"
+        android:textSize="@dimen/space_26"
+        android:textColor="@color/gray" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:gravity="center"
+        android:layout_marginBottom="50dip"
+        android:padding="5dip"
+        android:textSize="10sp"
+        android:text="任何问题和建议欢迎向Git App开发者oschina.net/@火蚁 反馈"
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="30dip"
+        android:text="Copyright © 2014 奥思网络版权所有"
+        android:textColor="@color/gray" />
+
+</FrameLayout>

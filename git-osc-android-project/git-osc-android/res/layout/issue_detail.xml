@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ListItem"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="0dp" >
+
+    <TextView
+        android:id="@+id/issue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/text"
+        android:textColorLink="@color/text_link"
+        android:textSize="15sp"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp" >
+
+        <ImageView
+            android:id="@+id/issue_author_face"
+            style="@style/AvatarMedium"
+            android:background="@drawable/widget_dface"
+            android:contentDescription="@string/avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <TextView
+                android:id="@+id/issue_author_name"
+                style="@style/ListTitleText"
+                android:paddingBottom="0dp"
+                android:singleLine="true"
+                android:text="火蚁"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/issue_date"
+                style="@style/ListSubtitleText"
+                android:singleLine="true"
+                android:text="创建于 一年前" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/issue_content"
+        style="@style/SubtitleText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+    
+</LinearLayout>

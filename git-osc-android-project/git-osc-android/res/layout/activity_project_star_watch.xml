@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|right"
+    android:layout_marginRight="15dip"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/project_star"
+        style="@style/project_detail_btn_style" >
+
+        <ImageView
+            android:id="@+id/project_star_stared"
+            style="@style/project_detail_btn_img"
+            android:background="@drawable/project_unstar" />
+
+        <TextView
+            android:id="@+id/project_star_text"
+            style="@style/project_detail_btn_text"
+            android:text="star" />
+
+        <TextView
+            android:id="@+id/project_starnum"
+            style="@style/project_detail_btn_text"
+            android:text="100" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/project_watch"
+        style="@style/project_detail_btn_style"
+        android:layout_marginLeft="15dip" >
+
+        <ImageView
+            android:id="@+id/project_watch_stared"
+            style="@style/project_detail_btn_img"
+            android:background="@drawable/project_unwatch" />
+
+        <TextView
+            android:id="@+id/project_watch_text"
+            style="@style/project_detail_btn_text"
+            android:text="watch" />
+
+        <TextView
+            android:id="@+id/project_watchnum"
+            style="@style/project_detail_btn_text"
+            android:text="100" />
+    </LinearLayout>
+
+</LinearLayout>

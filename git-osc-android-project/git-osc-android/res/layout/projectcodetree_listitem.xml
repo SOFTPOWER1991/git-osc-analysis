@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/list_layout_item_selector"
+    android:orientation="horizontal"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/projectcodetree_listitem_tag"
+        style="@style/project_codetree_list_img"
+        android:contentDescription="@string/img_description"
+        android:textColor="#BEBEBE"
+		android:text="@string/icon_folder" />
+
+    <TextView
+        android:id="@+id/projectcodetree_listitem_name"
+        style="@style/project_codetree_list_name" />
+
+</LinearLayout>

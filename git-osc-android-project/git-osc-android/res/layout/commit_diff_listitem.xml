@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ListItem"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <include 
+        android:id="@+id/commit_diff_ll"
+        layout="@layout/commit_diff_file_header"
+        android:background="@drawable/section_selector"/>
+    
+    <TextView
+        android:id="@+id/commit_diff_file" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dip"
+        android:visibility="gone" />
+
+</LinearLayout>

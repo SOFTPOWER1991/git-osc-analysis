@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/projectcode_switch_branch"
+        layout="@layout/projectcode_fragment_footer"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/projectcode_loading"
+        style="@style/ListSpinner"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/projectcode_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/projectcode_switch_branch"
+        android:orientation="vertical"
+        android:visibility="visible" >
+		
+        <include 
+                android:id="@+id/projectcode_tree_prefolder"
+                layout="@layout/projectcodetree_listitem_head"
+                android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/projectcode_tree"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

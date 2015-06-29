@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="7dip"
+    android:paddingLeft="6dip"
+    android:paddingRight="6dip"
+    android:paddingTop="8dip"
+    android:background="@drawable/list_layout_item_selector"
+    tools:context=".ui.fragments.ExploreLatestListProjectFragment" >
+
+    <!-- 项目作者头像 -->
+    <net.oschina.gitapp.widget.CircleImageView
+        android:id="@+id/exploreproject_listitem_userface"
+        style="@style/UserFaceImageStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dip"
+        android:orientation="vertical" >
+
+        <!-- 项目名称 -->
+        <TextView
+            android:id="@+id/exploreproject_listitem_title"
+            style="@style/project_list_title" />
+
+        <!-- 项目描述 -->
+        <TextView
+            android:id="@+id/exploreproject_listitem_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/project_list_description" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <!-- language type-->
+            <ImageView
+                android:id="@+id/exploreproject_listitem_language_image"
+                style="@style/project_list_img"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/language" />
+
+            <TextView
+                android:id="@+id/exploreproject_listitem_language"
+                style="@style/project_list_someinfo" />
+
+            <!-- star nums -->
+            <ImageView
+                style="@style/project_list_img"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/unstar" />
+
+            <TextView
+                android:id="@+id/exploreproject_listitem_star"
+                style="@style/project_list_someinfo" />
+
+            <!-- fork nums -->
+            <ImageView
+                style="@style/project_list_img"
+                android:contentDescription="@string/img_description"
+                android:src="@drawable/fork" />
+
+            <TextView
+                android:id="@+id/exploreproject_listitem_fork"
+                style="@style/project_list_someinfo" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

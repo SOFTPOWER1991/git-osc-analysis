@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ListItem"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/section_selector"
+    android:layout_marginTop="8dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/commit_diff_file_name"
+        style="@style/ListTitleText"
+        android:paddingBottom="0dp" />
+
+    <TextView
+        android:id="@+id/commit_diff_folder"
+        style="@style/ListSubtitleText"
+        android:singleLine="true"
+        android:textColor="@color/section_subtitle" />
+
+    <TextView
+        android:id="@+id/commit_diff_stats"
+        style="@style/ListSubtitleText"
+        android:singleLine="true"
+        android:textColor="@color/section_subtitle"
+        android:visibility="gone" />
+
+</LinearLayout>

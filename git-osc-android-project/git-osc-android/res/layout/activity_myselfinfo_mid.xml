@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/user_info_followers_ll"
+        style="@style/User_info_layout"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/table_above_bg" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="Followers：" />
+
+        <TextView
+            android:id="@+id/user_info_followers"
+            style="@style/User_info_detail_text" />
+
+        <ImageView
+            style="@style/User_info_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info_starred_ll"
+        style="@style/User_info_layout"
+        android:background="@drawable/table_mid_bg" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="Starred：" />
+
+        <TextView
+            android:id="@+id/user_info_starred"
+            style="@style/User_info_detail_text" />
+
+        <ImageView
+            style="@style/User_info_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info_following_ll"
+        style="@style/User_info_layout"
+        android:background="@drawable/table_mid_bg" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="Following：" />
+
+        <TextView
+            android:id="@+id/user_info_following"
+            style="@style/User_info_detail_text" />
+
+        <ImageView
+            style="@style/User_info_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info_watched_ll"
+        style="@style/User_info_layout"
+        android:background="@drawable/table_below_bg" >
+
+        <TextView
+            style="@style/User_info_title"
+            android:text="Watched：" />
+
+        <TextView
+            android:id="@+id/user_info_watched"
+            style="@style/User_info_detail_text" />
+
+        <ImageView
+            style="@style/User_info_img"
+            android:contentDescription="@string/img_description" />
+    </LinearLayout>
+
+</LinearLayout>

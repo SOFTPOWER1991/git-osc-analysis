@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/net.oschina.gitapp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".ui.SearchActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:queryHint="@string/search_hint" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/red" />
+
+        <ListView
+            android:id="@+id/search_list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/search_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/search_empty"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/search_loading"
+        style="@style/ListSpinner"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>
