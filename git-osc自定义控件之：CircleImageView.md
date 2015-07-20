@@ -66,6 +66,7 @@ CircleImageView中使用到的知识点：
 		a.recycle();
 ```
 上面就是一个具体的应用：
+
 1. 通过`obtainStyledAttributes` 获取 `TypedArray` , 其属性值存放在 `res/attrs.xml`中的`declare-styleable`中，关于`declare-styleable`在下面再具体描述；
 2. 通过`TypedArray`提供的一系列方法`getXXXX`获取对应的属性；
 3. 拿完属性之后，要调用 `recycle()`。
