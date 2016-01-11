@@ -74,5 +74,199 @@ TypefaceUtils.setFontAwsome(this.mTvTipState);
 在网上搜了下，大致意思是说：使用这个可以在Android平台上使用自定义字体更方便。具体的也不深究了。
 
 
+###EnhanceListView.java
+
+> 一个自定义的ListView，可以完成上拉加载更多、下拉刷新。
+> 有分页加载功能：通过mPageNum 、mPageSize完成
+
+经常用的就不多啰嗦了。
+
+代码位置：
+
+[]()
+
+###通用Adapter的使用
+
+在上一篇文章中已经学习了。不再啰嗦。
+
+###ButterKnife的使用
+
+在学习开源中国源码时翻译过ButterKnife的文档，在此不再赘述。
+
+###JsonUtils进行Json解析
+
+> 一个Json解析工具，借助commons-io 和jackson-mapper-asl 两个jar包来完成json解析
+
+```
+package net.oschina.gitapp.util;
+
+import org.apache.commons.io.IOUtils;
+import org.codehaus.jackson.map.DeserializationConfig;
+import org.codehaus.jackson.map.ObjectMapper;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import javax.net.ssl.SSLHandshakeException;
+
+
+/***
+ * json工具解析类
+ */
+public class JsonUtils {
+
+    public static final ObjectMapper MAPPER = new ObjectMapper().configure(
+            DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+    public static <T> T toBean(Class<T> type, InputStream is) {
+        T obj = null;
+        try {
+            obj = parse(is, type, null);
+        } catch (IOException e) {
+        }
+        return obj;
+    }
+
+    /**
+     * 对获取到的网络数据进行处理
+     *
+     * @param inputStream
+     * @param type
+     * @param instance
+     * @return
+     * @throws java.io.IOException
+     */
+    private static <T> T parse(InputStream inputStream, Class<T> type, T instance) throws
+            IOException {
+        InputStreamReader reader = null;
+        try {
+            reader = new InputStreamReader(inputStream);
+            String data = IOUtils.toString(reader);
+
+            L.et("data" , data);
+
+            if (type != null) {
+                return MAPPER.readValue(data, type);
+            } else if (instance != null) {
+                return MAPPER.readerForUpdating(instance).readValue(data);
+            } else {
+                return null;
+            }
+        } catch (SSLHandshakeException e) {
+            throw new SSLHandshakeException("You can disable certificate checking by setting " +
+                    "ignoreCertificateErrors on GitlabHTTPRequestor");
+        } finally {
+            IOUtils.closeQuietly(reader);
+        }
+    }
+
+    public static <T> T toBean(Class<T> type, byte[] bytes) {
+        if (bytes == null) {
+            return null;
+        }
+        return toBean(type, new ByteArrayInputStream(bytes));
+    }
+	
+    public static <T> List<T> getList(Class<T[]> type, byte[] bytes) {
+        if (bytes == null) return null;
+        List<T> results = new ArrayList<T>();
+        try {
+            T[] _next = toBean(type, bytes);
+            if (_next != null)
+                Collections.addAll(results, _next);
+        } catch (Exception e) {
+            return null;
+        }
+        return results;
+    }
+}
+
+```
+
+在项目中的使用：
+
+```
+List<Language> languageList = JsonUtils.getList(Language[].class, t);
+```
+> 1.传进来的参数：Language[].class 和 byte[].这个list里放的type为Language.
+> 2.在getList（）中走到了 T[] _next = toBean(type, bytes)；
+> 3.toBean 最终走到了parse（xxx）在parse中完成了解析。
+> 4.在parse中  String data = IOUtils.toString(reader);将byte[]转为了标准的json
+> 5. 然后再通过刚开始设置的  ObjectMapper MAPPER = new ObjectMapper().configure(
+            DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false); 完成解析。
+            
+感觉还是挺麻烦的。感觉不会再爱了，这个json解析。
+
+
+###ActionBar中的导航列表模式的使用
+
+在BaseActivity中进行了一系列的ActionBar的设置：
+
+```
+ // 初始化ActionBar
+    private void initActionBar() {
+        mActionBar = getSupportActionBar();
+        int flags = ActionBar.DISPLAY_HOME_AS_UP;
+        int change = mActionBar.getDisplayOptions() ^ flags;
+        // 设置返回的图标
+        mActionBar.setDisplayOptions(change, flags);
+        if (mTitle != null && !StringUtils.isEmpty(mTitle)) {
+            mActionBar.setTitle(mTitle);
+        }
+        if (mSubTitle != null && !StringUtils.isEmpty(mSubTitle)) {
+            mActionBar.setSubtitle(mSubTitle);
+        }
+    }
+
+    public void setActionBarTitle(String title) {
+        mActionBar.setTitle(title);
+    }
+
+    public void setActionBarSubTitle(String subTitle) {
+        mActionBar.setSubtitle(subTitle);
+    }
+
+```
+
+在LanguageActivity中通过如下代码设置导航模式为List模式：
+
+```
+mActionBar.setDisplayShowTitleEnabled(false);
+mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+```
+
+同时LanguageActivity implements ActionBar.OnNavigationListener，override了如下方法：
+
+```
+@Override
+    public boolean onNavigationItemSelected(int arg0, long arg1) {
+        Language language = mLanguageAdapter.getItem(arg0);
+        if (language != null) {
+            mProjectAdapter.clear();
+            mLanguageId = language.getId();
+            L.et("mLanguageId" , mLanguageId);
+            loadProjects(mLanguageId, 1);
+            return true;
+        }
+
+        return false;
+    }
+
+```
+
+当我们每更改一个选项时，就会根据当前language 调用loadProjects（xxxx）发起一个查询project的请求。
+
+以上就是git-osc中关于Language部分的学习。
+
+
+
+
+
+
 
 
